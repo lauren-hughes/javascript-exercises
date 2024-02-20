@@ -7,5 +7,11 @@ const palindromes = function (string) {
     return noPunctuationString === reversedString;
 };
 
+const palindromesRegex = function (string) {
+    let noPunctuation = string.toLowerCase().replaceAll(/[^a-z\d]/g, "");
+    let reversedString = noPunctuation.split("").reverse().join("");
+    return noPunctuation === reversedString;
+};
+
 // Do not edit below this line
 module.exports = palindromes;
